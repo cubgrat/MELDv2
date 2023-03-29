@@ -18,9 +18,18 @@ namespace MELDv2
 
             using (StreamReader reader = new StreamReader(path))
             {
+                int regCount = 0;
+                int condCount = 0;
                 string? line;
                 while ((line = reader.ReadLine()) != null)
                 {
+                    
+                    Regex regex = new Regex(@"S \d+\.\d\tS\d\d\d\d\.\d .+ M-\d+");
+                    if (regex.IsMatch(line))
+                        regCount++;
+                    if (regex.IsMatch(line))
+                        Console.WriteLine(line);
+
                     bool isMessageLine = false;
                     var subStrings = line.Split(new char[] { '\t' }, StringSplitOptions.RemoveEmptyEntries);
                     if (subStrings.Length > 2)
@@ -29,8 +38,10 @@ namespace MELDv2
                         if (subSubStrings.Length > 2  && subSubStrings[1].Contains("__"))
                         {
                             isMessageLine = true;
+                            condCount++;
                         }
                     }
+                    
                     string message = line;
                     if (isMessageLine)
                         S5MessagesRepository.Add(new S5Message(message));
@@ -42,6 +53,8 @@ namespace MELDv2
                     Console.Write("\t -> \t");
                     Console.WriteLine(AdressConverter.JoinAdress("DB170", AdressConverter.ConvertAdressS5toS7(item.Adress)));
                 }
+                Console.WriteLine(regCount);
+                Console.WriteLine(condCount);
 
             }
         }
