@@ -27,6 +27,8 @@ namespace MELDv2
                     Regex regex = new Regex(@"S \d+\.\d\tS\d\d\d\d\.\d .+ M-\d+");
                     if (regex.IsMatch(line))
                         regCount++;
+                    
+                    
                     if (regex.IsMatch(line))
                         Console.WriteLine(line);
 
