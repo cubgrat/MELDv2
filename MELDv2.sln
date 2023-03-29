@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MELDv2", "MELDv2\MELDv2.csproj", "{37A28BB5-A6F8-4FD1-8A0E-F1C13073A224}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatinToCyrilicConverterRUS", "LatinToCyrilicConverterRUS\LatinToCyrilicConverterRUS.csproj", "{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37A28BB5-A6F8-4FD1-8A0E-F1C13073A224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A28BB5-A6F8-4FD1-8A0E-F1C13073A224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A28BB5-A6F8-4FD1-8A0E-F1C13073A224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37A28BB5-A6F8-4FD1-8A0E-F1C13073A224}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24E05335-3C63-4AD5-9ECF-B44BAAF94A7D}
+	EndGlobalSection
+EndGlobal
