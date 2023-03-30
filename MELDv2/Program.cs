@@ -1,7 +1,7 @@
 ﻿using MELDv2;
 using MELDv2.Repositories;
 
-var PATH = "..\\MELD V2";
+var PATH = "..\\Files";
 
 
 var MELDv2 = new Startup(PATH);
