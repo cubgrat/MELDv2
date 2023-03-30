@@ -38,6 +38,13 @@ namespace MELDv2
             ConnectionName = Console.ReadLine();
             CNormal();
 
+            //TODO: Add TYPES and CLASS register
+
+            Console.Write("\nEnter star index for new messages:  ");
+            CWarning();
+            StartIndex = Int32.Parse(Console.ReadLine());
+            CNormal();
+
 
         }
         private string FolderPath { get; set; }
@@ -46,10 +53,14 @@ namespace MELDv2
         private string TagFilePath { get; set; }
         private string EndpointDB { get; set; }
         private string ConnectionName { get; set; }
+        private int StartIndex { get; set; }
+        private int Class { get; set; } = 2;
+        private int[] Types { get; set; } = { 17, 18, 19 };
         public void Run() 
         {
             new S5MessageReader(S5SeqPath);
             new TagWriter(TagFilePath,ConnectionName, EndpointDB);
+            new MessageWriter(MessageFilePath, StartIndex, Class, Types, ConnectionName);
 
         }
         private string ConfigureFilePath() 

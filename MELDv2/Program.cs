@@ -1,19 +1,14 @@
-﻿using LatinToCyrilicConverterRUS;
+﻿using MELDv2;
 using MELDv2.Repositories;
-using System.Text.RegularExpressions;
 
-namespace MELDv2
+var PATH = "C:\\Users\\vs\\Desktop\\MELD V2";
+
+
+var MELDv2 = new Startup(PATH);
+MELDv2.Run();
+
+
+foreach (var item in MessagesRepository.MessagesWinCC) 
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            new Startup("C:\\Users\\vs\\Desktop\\MELD V2").Run();
-
-            foreach (var item in TagsRepository.Tags)
-            {
-                Console.WriteLine(item.ToString());
-            }
-        }
-    }
+    Console.WriteLine(item.ToString());
 }
