@@ -26,7 +26,7 @@ namespace MELDv2.Repositories
         private string Folder { get; set; }
         private string Adress { get; set; }
 
-        private string Filler = "0 \t1 \t1 \t4 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0 \t0";
+        private string Filler = "0\t1\t1\t4\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0";
 
         public override string ToString()
         {
