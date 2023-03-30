@@ -14,11 +14,11 @@ namespace LatinToCyrilicConverterRUS.FileWorkers
         public S5MessageReader(string path) 
         {
             Path = path;
-            ReadFile(path);
+            ReadFile();
         }
         private string Path { get; set; }
 
-        private void ReadFile(string path) 
+        private void ReadFile() 
         {
             using (StreamReader s5messagesReader = new StreamReader(Path))
             {
@@ -43,14 +43,6 @@ namespace LatinToCyrilicConverterRUS.FileWorkers
                     //}
 
                 }
-
-                //foreach (var item in S5MessagesRepository.S5Messages)
-                //{
-                //    Console.Write(item.Adress);
-                //    Console.Write("\t -> \t");
-                //    Console.WriteLine(AdressConverter.JoinAdress("DB170", AdressConverter.ConvertAdressS5toS7(item.Adress)));
-                //}
-
             }
         }
     }

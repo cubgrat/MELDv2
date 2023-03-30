@@ -26,11 +26,20 @@ namespace LatinToCyrilicConverterRUS
 
             Console.WriteLine("\nSelect .csv messages file!");
             TagFilePath = ConfigureFilePath();
+
+
+            Console.Write("\nEnter endpoint DB number with alarms in S5:  ");
+            CWarning();
+            Console.Write("DB");
+            EndpointDB = Console.ReadLine();
+            CNormal();
+
         }
         private string FolderPath { get; set; }
         private string S5SeqPath { get; set; }
         private string MessageFilePath { get; set; }
         private string TagFilePath { get; set; }
+        private string EndpointDB { get; set; }
         public void Run() 
         {
             new S5MessageReader(S5SeqPath);
@@ -43,9 +52,9 @@ namespace LatinToCyrilicConverterRUS
             foreach (var item in scanner.GetFileNames())
             {
                 i++;
-                Console.ForegroundColor = ConsoleColor.Red;
+                CWarning();
                 Console.Write($"[{i}] ");
-                Console.ForegroundColor = ConsoleColor.White;
+                CNormal();
                 Console.WriteLine(item);
                 
             }
@@ -53,6 +62,15 @@ namespace LatinToCyrilicConverterRUS
             Console.Write("\nEnter file number: ");
             return scanner.GetPathAtIndexOf(Int32.Parse(Console.ReadLine()) - 1);
         }
+        private void CError() =>
+            Console.ForegroundColor = ConsoleColor.Red;
+        private void CWarning() =>
+            Console.ForegroundColor = ConsoleColor.Green;
+        private void CNormal() =>
+            Console.ForegroundColor = ConsoleColor.White;
+
+
+
 
     }
 }

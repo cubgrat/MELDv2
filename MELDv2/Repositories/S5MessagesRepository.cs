@@ -20,7 +20,7 @@ namespace MELDv2.Repositories
             Console.WriteLine(message);
             var messageSplit = message.Split('\t', StringSplitOptions.RemoveEmptyEntries);
             Adress = messageSplit[0];
-            var tempSplit = messageSplit[1].Split(' ');
+            var tempSplit = messageSplit[1].Split(' ', StringSplitOptions.RemoveEmptyEntries);
             BigAdress = tempSplit[0];
             MessageType = tempSplit[1];
             MessageNumberCode = tempSplit[2];
