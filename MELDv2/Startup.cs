@@ -7,9 +7,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using MELDv2.FileWorkers;
-using LatinToCyrilicConverterRUS.FileWorkers;
 
-namespace LatinToCyrilicConverterRUS
+namespace MELDv2
 {
     internal class Startup
     {
