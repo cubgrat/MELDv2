@@ -44,7 +44,9 @@ namespace MELDv2.Repositories
 
         public override string ToString() 
         {
-            return String.Format($"{Index},{Class},{Type},{Filler1},{Message},{Filler2},{S5Index},{Filler3},{Filler4},{Filler5},{TagName1},{Filler6},{TagName2},{Filler7}");
+            return Index + "," + Class + "," + Type + "," + Filler1 + "," + Message + "," + Filler2 + "," + S5Index + "," + Filler3 + "," + Filler4 
+                + "," + Filler5 + "," + TagName1 + "," + Filler6 + "," + TagName2 + "," + Filler7;
+            //return String.Format($"{Index},{Class},{Type},{Filler1},{Message},{Filler2},{S5Index},{Filler3},{Filler4},{Filler5},{TagName1},{Filler6},{TagName2},{Filler7}");
         }
     }
 }

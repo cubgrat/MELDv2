@@ -17,7 +17,6 @@ namespace MELDv2.Repositories
     {
         public S5Message(string message) 
         {
-            Console.WriteLine(message);
             var messageSplit = message.Split('\t', StringSplitOptions.RemoveEmptyEntries);
             Adress = messageSplit[0];
             var tempSplit = messageSplit[1].Split(' ', StringSplitOptions.RemoveEmptyEntries);

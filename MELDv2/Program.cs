@@ -8,7 +8,3 @@ var MELDv2 = new Startup(PATH);
 MELDv2.Run();
 
 
-foreach (var item in MessagesRepository.MessagesWinCC) 
-{
-    Console.WriteLine(item.ToString());
-}
