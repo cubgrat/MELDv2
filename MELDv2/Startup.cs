@@ -14,7 +14,20 @@ namespace MELDv2
     {
         public Startup(string folderPath) 
         {
+            if(!File.Exists(folderPath))
+                Directory.CreateDirectory(folderPath);
+            
             FolderPath = folderPath;
+
+
+            while (new FolderScaner(FolderPath).GetFileNames().Count() == 0)
+            {
+                CError();
+                Console.WriteLine("Files not found!");
+                Console.ReadLine();
+                CNormal();
+            }
+
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\nSelect .SEQ file!");
@@ -67,6 +80,7 @@ namespace MELDv2
         {
             FolderScaner scanner = new FolderScaner(FolderPath);
             int i = 0;
+
             foreach (var item in scanner.GetFileNames())
             {
                 i++;
