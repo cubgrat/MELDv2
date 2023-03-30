@@ -18,6 +18,7 @@ namespace MELDv2.FileWorkers
             ConnectionName = connectionName;
 
             ParseS5Repository();
+            WriteFile();
         }
         private string Path { get; set; }
         private int StartIndex { get; set; }
@@ -43,7 +44,17 @@ namespace MELDv2.FileWorkers
         }
         private void WriteFile()
         {
+            var splitPath = Path.Split('.');
+            var newFileName = splitPath[0] + "_MELDv2." + splitPath[1];
+            File.Copy(Path, newFileName);
 
+            using (StreamWriter mesWriter = new StreamWriter(newFileName, true))
+            {
+                foreach (var message in MessagesRepository.MessagesWinCC)
+                {
+                    mesWriter.WriteLine(message.ToString());
+                }
+            }
         }
         private string MakeName(string adress) =>
             ConnectionName + "_" + adress.Replace('.', '_');

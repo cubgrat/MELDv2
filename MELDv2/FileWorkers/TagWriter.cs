@@ -2,6 +2,7 @@
 using MELDv2.Repositories;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,9 @@ namespace MELDv2.FileWorkers
             Path = path;
             ConnectionName = connectionName;
             DB = db;
+
             ParseS5Repository();
+            WriteFile();
         }
         private string Path { get; set; }
         private string ConnectionName { get; set; }
@@ -35,7 +38,17 @@ namespace MELDv2.FileWorkers
         }
         private void WriteFile() 
         {
-            
+            var splitPath = Path.Split('.');
+            var newFileName = splitPath[0] + "_MELDv2_vex." + splitPath[1];
+            File.Copy(Path, newFileName);
+
+            using (StreamWriter tagWriter = new StreamWriter(newFileName, true))
+            {
+                foreach (var tag in TagsRepository.Tags)
+                {
+                    tagWriter.WriteLine(tag.ToString());
+                }
+            }
         }
         private string MakeName(string adress) =>
             ConnectionName + "_" + adress.Replace('.', '_');
