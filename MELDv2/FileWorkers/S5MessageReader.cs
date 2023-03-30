@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace LatinToCyrilicConverterRUS.FileWorkers
+namespace MELDv2.FileWorkers
 {
     internal class S5MessageReader
     {

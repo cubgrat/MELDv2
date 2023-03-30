@@ -31,8 +31,14 @@ namespace LatinToCyrilicConverterRUS
             Console.Write("\nEnter endpoint DB number with alarms in S5:  ");
             CWarning();
             Console.Write("DB");
-            EndpointDB = Console.ReadLine();
+            EndpointDB = "DB" + Console.ReadLine();
             CNormal();
+
+            Console.Write("\nEnter Simatic connection name (same in WinCC):  ");
+            CWarning();
+            ConnectionName = Console.ReadLine();
+            CNormal();
+
 
         }
         private string FolderPath { get; set; }
@@ -40,9 +46,11 @@ namespace LatinToCyrilicConverterRUS
         private string MessageFilePath { get; set; }
         private string TagFilePath { get; set; }
         private string EndpointDB { get; set; }
+        private string ConnectionName { get; set; }
         public void Run() 
         {
             new S5MessageReader(S5SeqPath);
+            new TagWriter(TagFilePath,ConnectionName, EndpointDB);
 
         }
         private string ConfigureFilePath() 

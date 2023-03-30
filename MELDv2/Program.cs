@@ -8,7 +8,12 @@ namespace MELDv2
     {
         static void Main(string[] args)
         {
-            new Startup("C:\\Users\\vs\\Desktop\\MELD V2");
+            new Startup("C:\\Users\\vs\\Desktop\\MELD V2").Run();
+
+            foreach (var item in TagsRepository.Tags)
+            {
+                Console.WriteLine(item.ToString());
+            }
         }
     }
 }

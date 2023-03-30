@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LatinToCyrilicConverterRUS.FileWorkers
+namespace MELDv2.FileWorkers
 {
     internal class MessageWriter
     {
