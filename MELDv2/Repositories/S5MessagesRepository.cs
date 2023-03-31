@@ -17,20 +17,28 @@ namespace MELDv2.Repositories
     {
         public S5Message(string message) 
         {
+            String = message;
             var messageSplit = message.Split('\t', StringSplitOptions.RemoveEmptyEntries);
             Adress = messageSplit[0];
             var tempSplit = messageSplit[1].Split(' ', StringSplitOptions.RemoveEmptyEntries);
             BigAdress = tempSplit[0];
             MessageType = tempSplit[1];
-            MessageNumberCode = tempSplit[2];
-            if(messageSplit.Length > 2)
+            if (tempSplit.Length == 3)
+                MessageNumberCode = tempSplit[2];
+            if (messageSplit.Length > 2)
                 MessageText = messageSplit[2];
 
         }
         public string Adress {get;set;}
         public string BigAdress { get; set; }
         public string MessageType { get; set; }
-        public string MessageNumberCode { get; set; }
+        public string? MessageNumberCode { get; set; }
         public string MessageText { get; set; } = "No message";
+        private string String { get; set; }
+
+        public override string ToString()
+        {
+            return String;
+        }
     }
 }

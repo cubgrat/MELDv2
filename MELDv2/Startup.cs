@@ -75,6 +75,9 @@ namespace MELDv2
             new TagWriter(TagFilePath,ConnectionName, EndpointDB);
             new MessageWriter(MessageFilePath, StartIndex, Class, Types, ConnectionName);
 
+            CWarning();
+            Console.WriteLine($"Message exported: {S5MessagesRepository.S5Messages.Count()}");
+            CNormal();
         }
         private string ConfigureFilePath() 
         {

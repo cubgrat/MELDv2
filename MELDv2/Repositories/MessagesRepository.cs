@@ -14,13 +14,14 @@ namespace MELDv2.Repositories
     }
     public class MessageWinCC 
     {
-        public MessageWinCC(int index, int @class, int type, string message, int s5Index, string tagName)
+        public MessageWinCC(int index, int @class, int type, string message, string s5Index, string s5adress, string tagName)
         {
             Index = index;
             Class = @class;
             Type = type;
             Message = message;
             S5Index = s5Index;
+            S5Adress = s5adress;
             TagName1 = tagName;
             TagName2 = tagName;
         }
@@ -32,9 +33,9 @@ namespace MELDv2.Repositories
         private string Filler1 = "0,0,0,0,0,0,0,0,0,0";
         private string Message { get; set; }
         private string Filler2 = " ";
-        private int S5Index { get; set; }
+        private string? S5Index { get; set; }
         private string Filler3 = " ";
-        private string Filler4 = "MXXX_S0.0";
+        private string S5Adress {get; set;}
         private string Filler5 = " , , , , , , , , , , , , , , ";
         private string TagName1 { get; set; }
         private int Filler6 = 0;
@@ -44,9 +45,9 @@ namespace MELDv2.Repositories
 
         public override string ToString() 
         {
-            return Index + "," + numX1 + "," + Class + "," + Type + "," + Filler1 + "," + Message + "," + Filler2 + "," + S5Index + "," + Filler3 + "," + Filler4 
+            return Index + "," + numX1 + "," + Class + "," + Type + "," + Filler1 + "," + Message + "," + Filler2 + "," + S5Index + "," + Filler3 + "," + S5Adress 
                 + "," + Filler5 + "," + TagName1 + "," + Filler6 + "," + TagName2 + "," + Filler7;
-            //return String.Format($"{Index},{Class},{Type},{Filler1},{Message},{Filler2},{S5Index},{Filler3},{Filler4},{Filler5},{TagName1},{Filler6},{TagName2},{Filler7}");
+            //return String.Format($"{Index},{Class},{Type},{Filler1},{Message},{Filler2},{S5Index},{Filler3},{S5Adress},{Filler5},{TagName1},{Filler6},{TagName2},{Filler7}");
         }
     }
 }
