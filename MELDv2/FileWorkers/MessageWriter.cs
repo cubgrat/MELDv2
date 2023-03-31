@@ -36,7 +36,8 @@ namespace MELDv2.FileWorkers
                         Class,
                         GetWinCCType(message.MessageType),
                         message.MessageText,
-                        Int32.Parse(message.MessageNumberCode.Split('-')[1]),
+                        message.MessageNumberCode ?? " ",
+                        message.Adress,
                         MakeName(message.BigAdress)
                     ));
                 StartIndex++;
@@ -45,6 +46,8 @@ namespace MELDv2.FileWorkers
         private void WriteFile()
         {
             var newFileName = Path.Replace(".txt", "_MELDv2.txt");
+            if (File.Exists(newFileName))
+                File.Delete(newFileName);
             File.Copy(Path, newFileName);
 
             using (StreamWriter mesWriter = new StreamWriter(newFileName, true))

@@ -25,25 +25,12 @@ namespace MELDv2.FileWorkers
                 string? line;
                 while ((line = s5messagesReader.ReadLine()) != null)
                 {
-
-                    Regex regex = new Regex(@"S \d+\.\d\tS\d\d\d\d\.\d .+ M-\d+");
+                    Regex regex = new Regex(@"S \d+\.\d\tS\d\d\d\d\.\d [1_][2_][3_][4_][5_][6_][7_][FWB]");
                     if (regex.IsMatch(line))
                         S5MessagesRepository.Add(new S5Message(line));
-
-                    //bool isMessageLine = false;
-                    //var subStrings = line.Split(new char[] { '\t' }, StringSplitOptions.RemoveEmptyEntries);
-                    //if (subStrings.Length > 2)
-                    //{
-                    //    var subSubStrings = subStrings[1].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                    //    if (subSubStrings.Length > 2  && subSubStrings[1].Contains("__"))
-                    //    {
-                    //        isMessageLine = true;
-                    //        condCount++;
-                    //    }
-                    //}
-
                 }
             }
         }
+        
     }
 }
