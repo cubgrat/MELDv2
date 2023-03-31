@@ -38,7 +38,7 @@ namespace MELDv2.FileWorkers
         }
         private void WriteFile() 
         {
-            var newFileName = Path.Replace("_vex.csv", "MELDv2_vex.csv");
+            var newFileName = Path.Replace("_vex.csv", "_MELDv2_vex.csv");
             File.Copy(Path, newFileName);
 
             using (StreamWriter tagWriter = new StreamWriter(newFileName, true))
