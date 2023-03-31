@@ -23,7 +23,7 @@ namespace MELDv2
             else
                 newAdrBit = adrBit;
 
-            var adress = String.Format($"D{newAdrByte}.{newAdrBit}");
+            var adress = String.Format($"D{newAdrByte},{newAdrBit}");
             return JoinAdress(db, adress);
 
         }

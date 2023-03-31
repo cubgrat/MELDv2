@@ -44,8 +44,7 @@ namespace MELDv2.FileWorkers
         }
         private void WriteFile()
         {
-            var splitPath = Path.Split('.');
-            var newFileName = splitPath[0] + "_MELDv2." + splitPath[1];
+            var newFileName = Path.Replace(".txt", "MELDv2.txt");
             File.Copy(Path, newFileName);
 
             using (StreamWriter mesWriter = new StreamWriter(newFileName, true))
