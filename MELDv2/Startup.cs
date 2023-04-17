@@ -45,6 +45,11 @@ namespace MELDv2
             Console.Write("DB");
             EndpointDB = "DB" + Console.ReadLine();
             CNormal();
+            
+            Console.Write("\nEnter endpoint DB offset (-1...+n, default start adress - DB*.D1.0):  ");
+            CWarning();
+            EndpointOffset = Int32.Parse(Console.ReadLine()); 
+            CNormal();
 
             Console.Write("\nEnter Simatic connection name (same in WinCC):  ");
             CWarning();
@@ -65,6 +70,7 @@ namespace MELDv2
         private string MessageFilePath { get; set; }
         private string TagFilePath { get; set; }
         private string EndpointDB { get; set; }
+        private int EndpointOffset { get; set; }
         private string ConnectionName { get; set; }
         private int StartIndex { get; set; }
         private int Class { get; set; } = 2;
@@ -72,7 +78,7 @@ namespace MELDv2
         public void Run() 
         {
             new S5MessageReader(S5SeqPath);
-            new TagWriter(TagFilePath,ConnectionName, EndpointDB);
+            new TagWriter(TagFilePath,ConnectionName, EndpointDB, EndpointOffset);
             new MessageWriter(MessageFilePath, StartIndex, Class, Types, ConnectionName);
 
             CWarning();

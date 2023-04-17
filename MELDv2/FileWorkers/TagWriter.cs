@@ -11,18 +11,19 @@ namespace MELDv2.FileWorkers
 {
     internal class TagWriter
     {
-        public TagWriter(string path, string connectionName, string db) 
+        public TagWriter(string path, string connectionName, string db, int offset) 
         {
             Path = path;
             ConnectionName = connectionName;
             DB = db;
-
+            Offset = offset;
             ParseS5Repository();
             WriteFile();
         }
         private string Path { get; set; }
         private string ConnectionName { get; set; }
         private string DB { get; set; }
+        private int Offset { get; set; }
         private void ParseS5Repository() 
         {
             foreach (S5Message message in S5MessagesRepository.S5Messages)
@@ -32,7 +33,7 @@ namespace MELDv2.FileWorkers
                         MakeName(message.BigAdress),
                         ConnectionName,
                         ConnectionName + "_Alarms",
-                        AdressConverter.ConvertAdressS5toS7(DB, message.Adress)
+                        AdressConverter.ConvertAdressS5toS7(DB, message.Adress, Offset)
                     ));
             }
         }

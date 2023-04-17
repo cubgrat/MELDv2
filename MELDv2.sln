@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MELDv2", "MELDv2\MELDv2.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LatinToCyrilicConverterRUS", "LatinToCyrilicConverterRUS\LatinToCyrilicConverterRUS.csproj", "{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MELDv2(UI)", "MELDv2(UI)\MELDv2(UI).csproj", "{44053657-AE01-4D02-B6B2-48D11603E1F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,10 +24,16 @@ Global
 		{37A28BB5-A6F8-4FD1-8A0E-F1C13073A224}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.MELD v2|Any CPU.ActiveCfg = MELD v2|Any CPU
-		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.MELD v2|Any CPU.Build.0 = MELD v2|Any CPU
+		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.MELD v2|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.MELD v2|Any CPU.Build.0 = Debug|Any CPU
 		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D9ED9F7-4163-4BD3-B040-828E1B016AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44053657-AE01-4D02-B6B2-48D11603E1F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44053657-AE01-4D02-B6B2-48D11603E1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44053657-AE01-4D02-B6B2-48D11603E1F4}.MELD v2|Any CPU.ActiveCfg = Debug|Any CPU
+		{44053657-AE01-4D02-B6B2-48D11603E1F4}.MELD v2|Any CPU.Build.0 = Debug|Any CPU
+		{44053657-AE01-4D02-B6B2-48D11603E1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44053657-AE01-4D02-B6B2-48D11603E1F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,7 +9,7 @@ namespace MELDv2
     static public class AdressConverter
     {
         //SWn to DWn like S 0.0 -> D0.8 -> DB0.D0.8
-        static public string ConvertAdressS5toS7(string db, string s5adress)
+        static public string ConvertAdressS5toS7(string db, string s5adress, int offset)
         {
             var adr = s5adress?.Split(new char[] { ' ' })?[1] ?? "0.0";
             var adrByteBit = adr.Split(new char[] { '.' });
@@ -23,7 +23,9 @@ namespace MELDv2
             else
                 newAdrBit = adrBit;
 
-            var adress = String.Format($"D{newAdrByte}.{newAdrBit}");
+            if (offset < -1) offset = -1;
+
+            var adress = String.Format($"D{newAdrByte+offset}.{newAdrBit}");
             return JoinAdress(db, adress);
 
         }
