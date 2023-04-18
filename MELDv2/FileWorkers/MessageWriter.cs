@@ -1,4 +1,5 @@
-﻿using MELDv2.Repositories;
+﻿using LatinToCyrilicConverterRUS;
+using MELDv2.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,8 @@ namespace MELDv2.FileWorkers
 
         private void ParseS5Repository()
         {
+            //russian translitic to cyrilic transformer(optionaly)
+            var ltc = new LatinToCyrilicConverter();
             foreach (S5Message message in S5MessagesRepository.S5Messages)
             {
                 MessagesRepository.Add(new MessageWinCC
@@ -35,7 +38,7 @@ namespace MELDv2.FileWorkers
                         StartIndex,
                         Class,
                         GetWinCCType(message.MessageType),
-                        message.MessageText,
+                        ltc.Translate(message.MessageText),
                         message.MessageNumberCode ?? " ",
                         message.Adress,
                         MakeName(message.BigAdress)
