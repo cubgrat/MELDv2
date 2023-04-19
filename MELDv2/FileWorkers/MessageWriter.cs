@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Encodings;
 
 namespace MELDv2.FileWorkers
 {
@@ -53,7 +54,7 @@ namespace MELDv2.FileWorkers
                 File.Delete(newFileName);
             File.Copy(Path, newFileName);
 
-            using (StreamWriter mesWriter = new StreamWriter(newFileName, true))
+            using (StreamWriter mesWriter = new StreamWriter(newFileName, true, encoding: CodePagesEncodingProvider.Instance.GetEncoding(1251)))
             {
                 foreach (var message in MessagesRepository.MessagesWinCC)
                 {
