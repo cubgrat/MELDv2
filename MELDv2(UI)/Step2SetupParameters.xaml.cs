@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MELDv2_UI_
 {
     /// <summary>
-    /// Логика взаимодействия для StartSettings.xaml
+    /// Логика взаимодействия для Step2SetupParameters.xaml
     /// </summary>
-    public partial class StartSettings : Page
+    public partial class Step2SetupParameters : Window
     {
-        public StartSettings()
+        public Step2SetupParameters()
         {
             InitializeComponent();
         }

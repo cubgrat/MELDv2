@@ -15,14 +15,13 @@ using System.Windows.Shapes;
 namespace MELDv2_UI_
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Step0CreatingFiles.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Step0CreatingFiles : Window
     {
-        public MainWindow()
+        public Step0CreatingFiles()
         {
             InitializeComponent();
-            
         }
     }
 }
