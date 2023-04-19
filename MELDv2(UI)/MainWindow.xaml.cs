@@ -24,5 +24,10 @@ namespace MELDv2_UI_
             InitializeComponent();
             
         }
+
+        private void Button_ColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        {
+
+        }
     }
 }
