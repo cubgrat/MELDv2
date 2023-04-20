@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,12 +24,17 @@ namespace MELDv2_UI_
         public MainWindow()
         {
             InitializeComponent();
+            nextButton.Click += OpenNext;
             
         }
 
-        private void Button_ColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        private void OpenNext(object sender, RoutedEventArgs e)
         {
-
+            Step0CreatingFiles window = new Step0CreatingFiles();
+            window.Left = Left;
+            window.Top = Top;
+            window.Show();
+            this.Close();
         }
     }
 }

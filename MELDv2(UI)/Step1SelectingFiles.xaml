@@ -6,7 +6,63 @@
         xmlns:local="clr-namespace:MELDv2_UI_"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
-    <Grid>
+    <Grid x:Name="MainRoot" Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="550*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="1" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Настройка проекта</TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Экспорт файлов</TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#1ED96F" VerticalAlignment="Center" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Выбор файлов</TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Конфигурация</TextBlock>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Импорт файлов</TextBlock>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="3" Grid.RowSpan="5"  MinWidth="170" MinHeight="450" Margin="0" Padding="15" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+        </Border>
         
-    </Grid>
+        <Button x:Name="backButton" Background="#4F5873" MinWidth="200" HorizontalAlignment="Left" Grid.Row="7" Grid.Column="1">Назад</Button>
+        <Button x:Name="nextButton" MinWidth="200" HorizontalAlignment="Right" Background="#010B40" Grid.Row="7" Grid.Column="3">Далее</Button>
+        </Grid>
 </Window>

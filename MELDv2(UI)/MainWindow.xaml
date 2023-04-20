@@ -33,37 +33,67 @@
             <ColumnDefinition Width="550*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <Border Grid.Row="1" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#1ED96F" VerticalAlignment="Center" CornerRadius="10">
+        <Border Grid.Row="1" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#1ED96F" VerticalAlignment="Center" CornerRadius="5">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Настройка проекта</TextBlock>
         </Border>
-        <Border Grid.Row="2" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="10">
+        <Border Grid.Row="2" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Экспорт файлов</TextBlock>
         </Border>
-        <Border Grid.Row="3" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="10">
+        <Border Grid.Row="3" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Выбор файлов</TextBlock>
         </Border>
-        <Border Grid.Row="4" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="10">
+        <Border Grid.Row="4" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Конфигурация</TextBlock>
         </Border>
-        <Border Grid.Row="5" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="10">
+        <Border Grid.Row="5" Grid.Column="1" MinWidth="170" MinHeight="60" Margin="10" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16">Импорт файлов</TextBlock>
         </Border>
-        <Button Background="#4F5873" Grid.Row="7" Grid.Column="1">Назад</Button>
-        <Button MinWidth="200" HorizontalAlignment="Right" Background="#010B40" Grid.Row="7" Grid.Column="3">Далее</Button>
+
+        <Border Grid.Row="1" Grid.Column="3" Grid.RowSpan="5"  MinWidth="170" MinHeight="450" Margin="0" Padding="15" Background="#D9D9D9" VerticalAlignment="Center" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left" FontWeight="Bold">
+                    Перед созданием сообщений в Alarm Logging должно быть сделанно: <LineBreak/>
+                </TextBlock>
+                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left">
+                    Шаг 1. Создан новый класс сообщений (например: Class 2) <LineBreak/>
+                    Внутри этого класса созданны типы сообщений: <LineBreak/>
+                    - Аварийные (например: Type 17) <LineBreak/>
+                    - Предупреждения (например: Type 18) <LineBreak/>
+                    - Рабочие (например: Type 19) <LineBreak/> <LineBreak/>
+                    Шаг 2. Включены системные блоки: <LineBreak/> 
+                    - Дата (центр, день.месяц.год(2 цифры)) <LineBreak/>
+                    - Время (центр, часы.минуты.секунды) <LineBreak/>
+                    - Длительность (центр, дни.часы.минуты.секунды) <LineBreak/> <LineBreak/>
+                    Шаг 3. Включены текстовые блоки пользователя: <LineBreak/>
+                    - Текст сообщения (Block 1) (слева, 70 символов) <LineBreak/>
+                    - Номер (Block 3) (центр, 5 символов) <LineBreak/>
+                    - Событие (Block 5) (центр, 22 символа) <LineBreak/>
+                </TextBlock>
+                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left">
+                    Шаг 4. Создано и сконфигурировано подключение к контроллеру
+                </TextBlock>
+            </StackPanel>
+        </Border>
+        
+        
+        <Button x:Name="nextButton" MinWidth="200" HorizontalAlignment="Right" Background="#010B40" Grid.Row="7" Grid.Column="3">Далее</Button>
     </Grid>
 </Window>

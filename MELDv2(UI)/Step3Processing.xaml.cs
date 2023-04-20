@@ -22,6 +22,23 @@ namespace MELDv2_UI_
         public Step3Processing()
         {
             InitializeComponent();
+            doneButton.Click += Exit;
+            backButton.Click += OpenBack;
+
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void OpenBack(object sender, RoutedEventArgs e)
+        {
+            Step2SetupParameters window = new Step2SetupParameters();
+            window.Left = Left;
+            window.Top = Top;
+            window.Show();
+            
+            this.Close();
         }
     }
 }

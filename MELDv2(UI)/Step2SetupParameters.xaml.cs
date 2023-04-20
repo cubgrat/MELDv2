@@ -22,6 +22,26 @@ namespace MELDv2_UI_
         public Step2SetupParameters()
         {
             InitializeComponent();
+            nextButton.Click += OpenNext;
+            backButton.Click += OpenBack;
+
+        }
+
+        private void OpenNext(object sender, RoutedEventArgs e)
+        {
+            Step3Processing window = new Step3Processing();
+            window.Left = Left;
+            window.Top = Top;
+            window.Show();
+            this.Close();
+        }
+        private void OpenBack(object sender, RoutedEventArgs e)
+        {
+            Step1SelectingFiles window = new Step1SelectingFiles();
+            window.Left = Left;
+            window.Top = Top;
+            window.Show();
+            this.Close();
         }
     }
 }
