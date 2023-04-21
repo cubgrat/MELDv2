@@ -1,4 +1,12 @@
 ﻿<Window x:Class="MELDv2_UI_.Step1SelectingFiles"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -60,6 +68,21 @@
             <Border.Effect>
                 <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Выберите .SEQ файл:</TextBlock>
+                <Button x:Name="seqFileButton" Grid.Row="0" Grid.Column="1" Background="#17BF60">Выбрать файл</Button>
+                <TextBlock x:Name="seqFileIsSelected" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">Файл не выбран</TextBlock>
+            </Grid>
         </Border>
         
         <Button x:Name="backButton" Background="#4F5873" MinWidth="200" HorizontalAlignment="Left" Grid.Row="7" Grid.Column="1">Назад</Button>

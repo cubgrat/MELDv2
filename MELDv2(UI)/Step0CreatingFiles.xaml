@@ -1,4 +1,12 @@
 ﻿<Window x:Class="MELDv2_UI_.Step0CreatingFiles"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -62,14 +70,25 @@
             </Border.Effect>
             <StackPanel>
                 <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left" FontWeight="Bold">
-                    Жир: <LineBreak/>
+                    Перед созданием сообщений в Alarm Logging должно быть сделанно: <LineBreak/>
                 </TextBlock>
                 <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left">
-                    Текст и формы <LineBreak/>
-                    
+                    Шаг 5. Выугружен файл сообщений из Simatic S5 (файл с расширением .SEQ) <LineBreak/>
                 </TextBlock>
                 <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left">
-                    да
+                    Шаг 6. Произведен экспорт тегов из проекта:<LineBreak/>
+                    - Открыт и не запущен целевой проект WinCC<LineBreak/>
+                    - Пуск -> SIMATIC -> WinCC -> Tools -> TAG Export Import<LineBreak/>
+                    - Выбран параметр "Export"<LineBreak/>
+                    - Execute<LineBreak/>
+                    - Файл с тегами(_vex) появится в папке проекта<LineBreak/>
+                </TextBlock>
+                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left">
+                    Шаг 7. Произведен экспорт сообщений из проекта:<LineBreak/>
+                    - Проект открыт в WinCC -> вкладка AlarmLogging<LineBreak/>
+                    - Верхняя вкладка Messages -> Export Single Messages<LineBreak/>
+                    - Нажаты все 3 галочки<LineBreak/>
+                    - Export
                 </TextBlock>
             </StackPanel>
         </Border>
