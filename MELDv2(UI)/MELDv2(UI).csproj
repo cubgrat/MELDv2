@@ -10,6 +10,19 @@
     <ApplicationIcon>logo.ico</ApplicationIcon>
     <Platforms>AnyCPU;x86;x64</Platforms>
     <Configurations>Debug;Release;MELD v2</Configurations>
+    <Title>MELD version 2(UI)</Title>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MELD v2|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MELD v2|x86'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MELD v2|x64'">
+    <Optimize>True</Optimize>
   </PropertyGroup>
 
   <ItemGroup>
