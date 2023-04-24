@@ -73,19 +73,42 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition MaxHeight="20"/>
+                    <RowDefinition MaxHeight="20"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
+
                 <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Выберите .SEQ файл:</TextBlock>
                 <Button x:Name="seqFileButton" Grid.Row="0" Grid.Column="1" Background="#17BF60">Выбрать файл</Button>
                 <TextBlock x:Name="seqFileIsSelected" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">Файл не выбран</TextBlock>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Выберите .TXT сообщений:</TextBlock>
+                <Button x:Name="messFileButton" Grid.Row="1" Grid.Column="1" Background="#17BF60">Выбрать файл</Button>
+                <TextBlock x:Name="messFileIsSelected" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">Файл не выбран</TextBlock>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Выберите .CSV файл тегов:</TextBlock>
+                <Button x:Name="tagFileButton" Grid.Row="2" Grid.Column="1" Background="#17BF60">Выбрать файл</Button>
+                <TextBlock x:Name="tagFileIsSelected" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">Файл не выбран</TextBlock>
+                <Grid Grid.Row="3" Grid.ColumnSpan="3">
+                    <TextBlock FontWeight="Bold" Margin="42,30,263,40">Выберите папку для сохранения:</TextBlock>
+                    <Button x:Name="folderButton" Background="#4F5873" Margin="267,21,72,42">Выбрать папку</Button>
+                </Grid>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" TextAlignment="Right" FontWeight="Bold" Padding="10">Путь к папке:</TextBlock>
+                <TextBox x:Name="folderPath" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"  Background="LightGray" IsReadOnlyCaretVisible="True">Путь не выбран</TextBox>
+
+
+
+
             </Grid>
         </Border>
-        
+
         <Button x:Name="backButton" Background="#4F5873" MinWidth="200" HorizontalAlignment="Left" Grid.Row="7" Grid.Column="1">Назад</Button>
         <Button x:Name="nextButton" MinWidth="200" HorizontalAlignment="Right" Background="#010B40" Grid.Row="7" Grid.Column="3">Далее</Button>
-        </Grid>
+    </Grid>
 </Window>

@@ -25,7 +25,11 @@ namespace MELDv2_UI_
             InitializeComponent();
             nextButton.Click += OpenNext;
             backButton.Click += OpenBack;
-
+            seqFileButton.Click += SelectSeqFile;
+            messFileButton.Click += SelectTxtFile;
+            tagFileButton.Click += SelectCsvFile;
+            folderButton.Click += SelectFolder;
+            
         }
 
         private void OpenNext(object sender, RoutedEventArgs e)
@@ -43,14 +47,54 @@ namespace MELDv2_UI_
             window.Top = Top;
             window.Show();
             this.Close();
+            tagFileIsSelected.Visibility = Visibility.Hidden;
         }
-        private void OpenFile(object sender, RoutedEventArgs e)
+        private void SelectSeqFile(object sender, RoutedEventArgs e)
         {
-            var test = new OpenFileDialog();
-            test.Multiselect = false;
-            test.InitialDirectory = "C:\\";
-            if (test.ShowDialog() == true)
-                MessageBox.Show(test.FileName);
+            var file = new OpenFileDialog();
+            file.Multiselect = false;
+            file.InitialDirectory = "C:\\";
+            if (file.ShowDialog() == true) 
+            {
+                seqFileIsSelected.Text = file.SafeFileName;
+                ConfigRepository.Config.MeltConfiguration.S5SeqPath = file.FileName;
+            }
+                
+        }
+        private void SelectTxtFile(object sender, RoutedEventArgs e)
+        {
+            var file = new OpenFileDialog();
+            file.Multiselect = false;
+            file.InitialDirectory = "C:\\";
+            if (file.ShowDialog() == true) 
+            {
+                messFileIsSelected.Text = file.SafeFileName;
+                ConfigRepository.Config.MeltConfiguration.MessageFilePath = file.FileName;
+            }
+                
+        }
+        private void SelectCsvFile(object sender, RoutedEventArgs e)
+        {
+            var file = new OpenFileDialog();
+            file.Multiselect = false;
+            file.InitialDirectory = "C:\\";
+            if (file.ShowDialog() == true)
+            {
+                tagFileIsSelected.Text = file.SafeFileName;
+                ConfigRepository.Config.MeltConfiguration.TagFilePath = file.FileName;
+            }
+        }
+        private void SelectFolder(object sender, RoutedEventArgs e)
+        {
+            
+            var file = new OpenFileDialog();
+            file.Multiselect = false;
+            file.InitialDirectory = "C:\\";
+            if (file.ShowDialog() == true)
+            {
+                folderPath.Text = file.FileName;
+                ConfigRepository.Config.MeltConfiguration.FolderPath = file.FileName;
+            }
         }
     }
 }

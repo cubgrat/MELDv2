@@ -9,6 +9,6 @@ namespace MELDv2_UI_.ConfigRepository
 {
     public static class Config
     {
-        public static MeltConfiguration MeltConfiguration { get; set; }
+        public static MeltConfiguration MeltConfiguration { get; set; } = new MeltConfiguration();
     }
 }
