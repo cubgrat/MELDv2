@@ -12,7 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using System.Windows.Forms;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 namespace MELDv2_UI_
 {
     /// <summary>
@@ -86,15 +87,14 @@ namespace MELDv2_UI_
         }
         private void SelectFolder(object sender, RoutedEventArgs e)
         {
-            
-            var file = new OpenFileDialog();
-            file.Multiselect = false;
-            file.InitialDirectory = "C:\\";
-            if (file.ShowDialog() == true)
+            var folderBrowsing = new FolderBrowserDialog();
+            folderBrowsing.InitialDirectory = "C:\\";
+            if (folderBrowsing.ShowDialog()  == System.Windows.Forms.DialogResult.OK) 
             {
-                folderPath.Text = file.FileName;
-                ConfigRepository.Config.MeltConfiguration.FolderPath = file.FileName;
+                folderPath.Text = folderBrowsing.SelectedPath;
+                ConfigRepository.Config.MeltConfiguration.FolderPath = folderBrowsing.SelectedPath;
             }
+
         }
     }
 }

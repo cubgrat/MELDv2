@@ -95,12 +95,12 @@
                 <Button x:Name="tagFileButton" Grid.Row="2" Grid.Column="1" Background="#17BF60">Выбрать файл</Button>
                 <TextBlock x:Name="tagFileIsSelected" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">Файл не выбран</TextBlock>
                 <Grid Grid.Row="3" Grid.ColumnSpan="3">
-                    <TextBlock FontWeight="Bold" Margin="42,30,263,40">Выберите папку для сохранения:</TextBlock>
+                    <TextBlock FontWeight="Bold" Margin="42,28,251,42">Выберите папку для сохранения:</TextBlock>
                     <Button x:Name="folderButton" Background="#4F5873" Margin="267,21,72,42">Выбрать папку</Button>
                 </Grid>
 
                 <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" TextAlignment="Right" FontWeight="Bold" Padding="10">Путь к папке:</TextBlock>
-                <TextBox x:Name="folderPath" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"  Background="LightGray" IsReadOnlyCaretVisible="True">Путь не выбран</TextBox>
+                <TextBox x:Name="folderPath" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"  Background="LightGray" >Путь не выбран</TextBox>
 
 
 
