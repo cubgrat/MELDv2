@@ -68,18 +68,89 @@
             <Border.Effect>
                 <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
-            <StackPanel>
-                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left" FontWeight="Bold">
-                    Жир: <LineBreak/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    Название соединения: <LineBreak/>
                 </TextBlock>
-                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left">
-                    Текст и формы <LineBreak/>
+                <TextBox x:Name="connectionName" Background="DarkGray" Foreground="White"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                </TextBox> 
 
+                <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    Номер блока данных DB: <LineBreak/>
                 </TextBlock>
-                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left">
-                    да
+                <TextBox x:Name="endpointDB" Background="DarkGray" Foreground="White"  Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                </TextBox>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    Смещение по DB: <LineBreak/>
+                    <TextBlock FontWeight="Normal">(стартовый адрес по-умолчанию DW 1.0)</TextBlock>
                 </TextBlock>
-            </StackPanel>
+                <TextBox x:Name="endpointOffset" Background="DarkGray" Foreground="White"  Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    0
+                </TextBox>
+                
+                <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    Стартовый индекс импортируемых сообщений: <LineBreak/>
+                </TextBlock>
+                <TextBox x:Name="startIndex" Background="DarkGray" Foreground="White"  Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                </TextBox>
+                
+                <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    Номер класса сообщений: <LineBreak/>
+                </TextBlock>
+                <TextBox x:Name="class" Background="DarkGray" Foreground="White"  Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    2
+                </TextBox>
+                
+                <TextBlock Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    Номера типов сообщений: <LineBreak/>
+                </TextBlock>
+                <Grid  Grid.Row="5" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" MinWidth="80"  TextWrapping="Wrap" TextAlignment="Center">
+                    Авария <LineBreak/>
+                    </TextBlock>
+                    <TextBox x:Name="typeF" Background="DarkGray" Foreground="White" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="60"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                        17
+                    </TextBox>
+
+                    <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" MinWidth="80"  TextWrapping="Wrap" TextAlignment="Center">
+                    Ошибка <LineBreak/>
+                    </TextBlock>
+                    <TextBox x:Name="typeW" Background="DarkGray" Foreground="White" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="60"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                        18
+                    </TextBox>
+
+                    <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" MinWidth="80"  TextWrapping="Wrap" TextAlignment="Center">
+                    Информация <LineBreak/>
+                    </TextBlock>
+                    <TextBox x:Name="typeB" Background="DarkGray" Foreground="White" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="60"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                        19
+                    </TextBox>
+                </Grid>
+                
+            </Grid>
         </Border>
         <Button x:Name="backButton" Background="#4F5873" MinWidth="200" HorizontalAlignment="Left" Grid.Row="7" Grid.Column="1">Назад</Button>
         <Button x:Name="nextButton" MinWidth="200" HorizontalAlignment="Right" Background="#010B40" Grid.Row="7" Grid.Column="3">Далее</Button>

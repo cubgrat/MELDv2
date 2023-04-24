@@ -35,11 +35,29 @@ namespace MELDv2_UI_
 
         private void OpenNext(object sender, RoutedEventArgs e)
         {
-            Step2SetupParameters window = new Step2SetupParameters();
-            window.Left = Left;
-            window.Top = Top;
-            window.Show();
-            this.Close();
+            if (ConfigRepository.Config.MeltConfiguration.S5SeqPath != null ||
+                ConfigRepository.Config.MeltConfiguration.MessageFilePath != null ||
+                ConfigRepository.Config.MeltConfiguration.TagFilePath != null ||
+                ConfigRepository.Config.MeltConfiguration.FolderPath != null
+                )
+            {
+                Step2SetupParameters window = new Step2SetupParameters();
+                window.Left = Left;
+                window.Top = Top;
+                window.Show();
+                this.Close();
+            }
+            else 
+            {
+                seqFileIsSelected.Text = "Выберите файл!";
+                seqFileIsSelected.Foreground = new SolidColorBrush(Colors.Red);
+
+                messFileIsSelected.Text = "Выберите файл!";
+                messFileIsSelected.Foreground = new SolidColorBrush(Colors.Red);
+
+                tagFileIsSelected.Text = "Выберите файл!";
+                tagFileIsSelected.Foreground = new SolidColorBrush(Colors.Red);
+            }
         }
         private void OpenBack(object sender, RoutedEventArgs e)
         {
