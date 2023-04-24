@@ -35,9 +35,9 @@ namespace MELDv2_UI_
 
         private void OpenNext(object sender, RoutedEventArgs e)
         {
-            if (ConfigRepository.Config.MeltConfiguration.S5SeqPath != null ||
-                ConfigRepository.Config.MeltConfiguration.MessageFilePath != null ||
-                ConfigRepository.Config.MeltConfiguration.TagFilePath != null ||
+            if (ConfigRepository.Config.MeltConfiguration.S5SeqPath != null &&
+                ConfigRepository.Config.MeltConfiguration.MessageFilePath != null &&
+                ConfigRepository.Config.MeltConfiguration.TagFilePath != null &&
                 ConfigRepository.Config.MeltConfiguration.FolderPath != null
                 )
             {
@@ -66,7 +66,6 @@ namespace MELDv2_UI_
             window.Top = Top;
             window.Show();
             this.Close();
-            tagFileIsSelected.Visibility = Visibility.Hidden;
         }
         private void SelectSeqFile(object sender, RoutedEventArgs e)
         {
@@ -78,7 +77,8 @@ namespace MELDv2_UI_
                 seqFileIsSelected.Text = file.SafeFileName;
                 ConfigRepository.Config.MeltConfiguration.S5SeqPath = file.FileName;
             }
-                
+            seqFileIsSelected.Foreground = new SolidColorBrush(Colors.Black);
+
         }
         private void SelectTxtFile(object sender, RoutedEventArgs e)
         {
@@ -90,7 +90,8 @@ namespace MELDv2_UI_
                 messFileIsSelected.Text = file.SafeFileName;
                 ConfigRepository.Config.MeltConfiguration.MessageFilePath = file.FileName;
             }
-                
+            messFileIsSelected.Foreground = new SolidColorBrush(Colors.Black);
+
         }
         private void SelectCsvFile(object sender, RoutedEventArgs e)
         {
@@ -102,6 +103,7 @@ namespace MELDv2_UI_
                 tagFileIsSelected.Text = file.SafeFileName;
                 ConfigRepository.Config.MeltConfiguration.TagFilePath = file.FileName;
             }
+            tagFileIsSelected.Foreground = new SolidColorBrush(Colors.Black);
         }
         private void SelectFolder(object sender, RoutedEventArgs e)
         {

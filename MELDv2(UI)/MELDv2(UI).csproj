@@ -8,6 +8,8 @@
     <UseWPF>true</UseWPF>
 	<UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>logo.ico</ApplicationIcon>
+    <Platforms>AnyCPU;x86</Platforms>
+    <Configurations>Debug;Release;MELD v2</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
