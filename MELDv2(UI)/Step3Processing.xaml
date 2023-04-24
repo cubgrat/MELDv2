@@ -68,18 +68,27 @@
             <Border.Effect>
                 <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
-            <StackPanel>
-                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left" FontWeight="Bold">
-                    Жир: <LineBreak/>
-                </TextBlock>
-                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left">
-                    Текст и формы <LineBreak/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
+                <TextBlock Grid.Row="0" FontWeight="Bold" FontSize="15" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center">
+                    Конфигурация получена.<LineBreak/>  
+                    Файлы выбраны.<LineBreak/>
+                    Нажмите на кнопку "Конвертировать" что бы приступить к генерации файлов импорта.<LineBreak/>
                 </TextBlock>
-                <TextBlock MinWidth="160"  TextWrapping="Wrap" TextAlignment="Left">
-                    да
-                </TextBlock>
-            </StackPanel>
+                <Button Grid.Row="1" x:Name="submitButton" HorizontalAlignment="Center" MinWidth="250" Background="#17BF60">Конвертировать</Button>
+                <ProgressBar Grid.Row="2" x:Name="progressBar" Visibility="Hidden"/>
+                <TextBlock Grid.Row="4" HorizontalAlignment="Center" x:Name="statusText"></TextBlock>
+                <Button Grid.Row="4" x:Name="openFolder" HorizontalAlignment="Center" MinWidth="250" Background="#4F5873" Visibility="Hidden">Открыть папку в проводнике</Button>
+            </Grid>
         </Border>
         <Button x:Name="backButton" Background="#4F5873" MinWidth="200" HorizontalAlignment="Left" Grid.Row="7" Grid.Column="1">Назад</Button>
         <Button x:Name="doneButton" MinWidth="200" HorizontalAlignment="Right" Background="#010B40" Grid.Row="7" Grid.Column="3">Готово</Button>
