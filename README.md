@@ -1,14 +1,14 @@
 # MELDv2: Codefiles generator for migrate COROS alarm messages to WinCC system via S5 .SEQ config
 
-
 We provide our open source program for project migration from SCADA KORUS to WinCC visualization systems in this repository.
 
-##Requirements
+## Requirements
 
 |            Run apps - Runtime           |   Installers   | Version |
 |:--------------------------:|:-------------------------------:|:------:|
 |       .NET Desktop Runtime      | [windowsdesktop-runtime-6.0.15-win-x64](https://dotnet.microsoft.com/en-us/download/dotnet/6.0), [SyntaSpeech](), [VITS]() |  6.0.16   |
 |      .NET Runtime     |         [dotnet-runtime-6.0.15-win-x64](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)         |  6.0.16   |
+
 
 ## Get Started
 
@@ -16,8 +16,6 @@ Step 0. Install runtime SDK.
 Step 1. Compile.
 Step 2. Run [MELDv2(UI)]() executable file to start the graphical shell
 or [MELDv2]() to run the console version.
-
-
 
 
 ## Capabilities
@@ -29,6 +27,7 @@ GUI view:
 
 Console interface view:
 ![image](https://user-images.githubusercontent.com/26198117/235439954-a36df694-aae6-4e40-86ca-35c242aff04d.png)
+
 
 ## License
 
