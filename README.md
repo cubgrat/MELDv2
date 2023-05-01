@@ -2,11 +2,6 @@
 
 # MELDv2: Codefiles generator for migrate COROS alarm messages to WinCC system via S5 .SEQ config
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2304.12995)
-[![GitHub Stars](https://img.shields.io/github/stars/AIGC-Audio/AudioGPT?style=social)](https://github.com/AIGC-Audio/AudioGPT)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=AIGC-Audio.AudioGPT)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/spaces/AIGC-Audio/AudioGPT)
-
 
 We provide our open source program for project migration from SCADA KORUS to WinCC visualization systems in this repository.
 
