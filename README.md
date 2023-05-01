@@ -1,5 +1,3 @@
-# MELDv2
-
 # MELDv2: Codefiles generator for migrate COROS alarm messages to WinCC system via S5 .SEQ config
 
 
