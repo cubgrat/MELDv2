@@ -80,37 +80,38 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition MaxHeight="20"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                     Название соединения: <LineBreak/>
                 </TextBlock>
-                <TextBox x:Name="connectionName" Background="DarkGray" Foreground="White"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                <TextBox ToolTip="Пример: MR21" x:Name="connectionName" Background="DarkGray" Foreground="White"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                 </TextBox> 
 
                 <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                     Номер блока данных DB: <LineBreak/>
                 </TextBlock>
-                <TextBox x:Name="endpointDB" Background="DarkGray" Foreground="White"  Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                <TextBox ToolTip="Пример: DB90" x:Name="endpointDB" Background="DarkGray" Foreground="White"  Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                 </TextBox>
 
                 <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                     Смещение по DB: <LineBreak/>
                     <TextBlock FontWeight="Normal">(стартовый адрес по-умолчанию DW 1.0)</TextBlock>
                 </TextBlock>
-                <TextBox x:Name="endpointOffset" Background="DarkGray" Foreground="White"  Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                <TextBox ToolTip="Пример: -1" x:Name="endpointOffset" Background="DarkGray" Foreground="White"  Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                     0
                 </TextBox>
                 
                 <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                     Стартовый индекс импортируемых сообщений: <LineBreak/>
                 </TextBlock>
-                <TextBox x:Name="startIndex" Background="DarkGray" Foreground="White"  Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                <TextBox ToolTip="Пример: 2000000" x:Name="startIndex" Background="DarkGray" Foreground="White"  Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                 </TextBox>
                 
                 <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                     Номер класса сообщений: <LineBreak/>
                 </TextBlock>
-                <TextBox x:Name="class" Background="DarkGray" Foreground="White"  Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                <TextBox ToolTip="Пример: 2" x:Name="class" Background="DarkGray" Foreground="White"  Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="160"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                     2
                 </TextBox>
                 
@@ -131,24 +132,25 @@
                     <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" MinWidth="80"  TextWrapping="Wrap" TextAlignment="Center">
                     Авария <LineBreak/>
                     </TextBlock>
-                    <TextBox x:Name="typeF" Background="DarkGray" Foreground="White" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="60"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    <TextBox ToolTip="Пример: 17" x:Name="typeF" Background="DarkGray" Foreground="White" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="60"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                         17
                     </TextBox>
 
                     <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" MinWidth="80"  TextWrapping="Wrap" TextAlignment="Center">
                     Ошибка <LineBreak/>
                     </TextBlock>
-                    <TextBox x:Name="typeW" Background="DarkGray" Foreground="White" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="60"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    <TextBox ToolTip="Пример: 18" x:Name="typeW" Background="DarkGray" Foreground="White" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="60"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                         18
                     </TextBox>
 
                     <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" MinWidth="80"  TextWrapping="Wrap" TextAlignment="Center">
                     Информация <LineBreak/>
                     </TextBlock>
-                    <TextBox x:Name="typeB" Background="DarkGray" Foreground="White" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="60"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
+                    <TextBox ToolTip="Пример: 19" x:Name="typeB" Background="DarkGray" Foreground="White" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="60"  TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold">
                         19
                     </TextBox>
                 </Grid>
+                <TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Foreground="Gray" VerticalAlignment="Bottom" HorizontalAlignment="Center">Удерживайте указатель на поле ввода для  полученияя справки</TextBlock>
                 
             </Grid>
         </Border>

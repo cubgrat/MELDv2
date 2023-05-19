@@ -41,7 +41,7 @@ namespace MELDv2.FileWorkers
                         GetWinCCType(message.MessageType),
                         ltc.Translate(message.MessageText),
                         message.MessageNumberCode ?? " ",
-                        message.Adress,
+                        ConnectionName + " " + message.Adress,
                         MakeName(message.BigAdress)
                     ));
                 StartIndex++;
